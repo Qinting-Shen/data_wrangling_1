@@ -18,6 +18,47 @@ litters_df=
 
 litters_df=
   janitor::clean_names(litters_df)
+```
+
+Now import the `FAS_pups.csv` csv.
+
+```{r}
+pups_df=
+  read_csv(file="data/FAS_pups.csv")
+
+pups_df=
+  janitor::clean_names(pups_df)
+```
+
+## Look at data
+
+```{r}
+litters_df
+
+head(litters_df)
+
+tail(litters_df)
+```
+
+you can use `view`
+
+```{r, eval(FALSE)}
+view(litters_df)
 
 ```
+
+
+Look at a data summary
+
+```{r}
+str(litters_df)
+
+skimr::skim(litters_df)
+```
+
+
+
+
+
+
 
