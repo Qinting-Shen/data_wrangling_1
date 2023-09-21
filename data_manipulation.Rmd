@@ -1,0 +1,11 @@
+---
+title: "data_manipulation"
+author: "Qinting Shen"
+date: "2023-09-19"
+output: github_document
+---
+
+```{r}
+library(tidyverse)
+```
+

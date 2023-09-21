@@ -250,3 +250,39 @@ import a SAS file
 pulse_df=
   read_sas("data/public_pulse_data.sas7bdat")
 ```
+
+## Base R …
+
+don’t do this
+
+``` r
+litters_df=
+  read.csv("data/FAS_litters.csv")
+
+litters_df$Gr
+```
+
+## Export data
+
+We have code that “clear”
+
+``` r
+litters_df_clean=
+  read_csv("data/FAS_litters.csv")
+```
+
+    ## Rows: 49 Columns: 8
+    ## ── Column specification ────────────────────────────────────────────────────────
+    ## Delimiter: ","
+    ## chr (2): Group, Litter Number
+    ## dbl (6): GD0 weight, GD18 weight, GD of Birth, Pups born alive, Pups dead @ ...
+    ## 
+    ## ℹ Use `spec()` to retrieve the full column specification for this data.
+    ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+
+``` r
+litters_df_clean=
+  janitor::clean_names(litters_df_clean)
+
+write_csv(litters_df_clean, "data/litters_clean.csv")
+```
