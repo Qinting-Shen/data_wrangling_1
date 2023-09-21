@@ -98,7 +98,6 @@ drop_na(litters_data, gd0_weight)
 
 this is used to add or change variables
 
-not change dataset??
 
 ```{r}
 mutate(litters_data,wt_gain = gd18_weight - gd0_weight)
@@ -113,8 +112,22 @@ mutate(
 
 ```
 
+`view(mutate(litters_data,wt_gain = gd18_weight - gd0_weight))`
+
+## `arrange`
+
+```{r}
+arrange(litters_data, gd0_weight)
+arrange(litters_data, group,  gd0_weight)
+
+```
 
 
+## `pipes`
+
+```{r}
+
+```
 
 
 
