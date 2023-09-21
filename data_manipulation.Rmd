@@ -86,6 +86,34 @@ filter(litters_data, group %in% c("Con7" , "Con8"), gd0_weight > 20)
 ```
 
 
+what about missing rows
+
+```{r}
+drop_na(litters_data)
+drop_na(litters_data, gd0_weight)
+```
+
+
+## `mutate`
+
+this is used to add or change variables
+
+not change dataset??
+
+```{r}
+mutate(litters_data,wt_gain = gd18_weight - gd0_weight)
+
+mutate(litters_data, group = str_to_lower(group))
+
+mutate(
+  litters_data,
+  wt_gain = gd18_weight - gd0_weight,
+  group = str_to_lower(group)
+  )
+
+```
+
+
 
 
 
