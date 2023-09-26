@@ -135,7 +135,7 @@ litters_data =
       wt_gain = gd18_weight - gd0_weight,
      ) %>% 
     drop_na(wt_gain) %>% 
-    arrange(group, wt_gain)
+    arrange(group, wt_gain) 
 ```
 
 
